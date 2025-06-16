@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:models="clr-namespace:NotesArevalo.Models"
+             x:Class="NotesArevalo.Views.AboutPage"
+             Title="Lenin Arevalo">
+    <ContentPage.BindingContext>
+        <models:About />
+    </ContentPage.BindingContext>
+    <VerticalStackLayout Spacing="10" Margin="10">
+        <HorizontalStackLayout Spacing="10">
+            <Image Source="programador.jpg"
+               SemanticProperties.Description="The dot net bot waving hello!"
+               HeightRequest="64" />
+            <Label FontSize="22" FontAttributes="Bold" Text="App de notas. Descripcion breve sobre mi:" VerticalOptions="End" />
+            <Label FontSize="22" Text="{Binding Version}" VerticalOptions="End" />
+        </HorizontalStackLayout>
+
+        <Label Text="Lenin Arevalo, descubriendo la programacion en XAML, C# para paginas web y dispositivos moviles." />
+        <Button Text="Lenin Arevalo (Boton sin funcionalidad XD)" Clicked="LearnMore_Clicked" />
+    </VerticalStackLayout>
+</ContentPage>
